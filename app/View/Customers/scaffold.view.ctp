@@ -58,8 +58,8 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<div class="">
+	<h3><?php echo __(''); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Customer'), array('action' => 'edit', $customer['Customer']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete Customer'), array('action' => 'delete', $customer['Customer']['id']), array(), __('Are you sure you want to delete # %s?', $customer['Customer']['id'])); ?> </li>
@@ -86,7 +86,7 @@
 		<th><?php echo __('Pctchange'); ?></th>
 		<th><?php echo __('Volume'); ?></th>
 		<th><?php echo __('Ytdchange'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th class=""><?php echo __(''); ?></th>
 	</tr>
 	<?php foreach ($customer['Company'] as $company): ?>
 		<tr>
@@ -98,17 +98,13 @@
 			<td><?php echo $company['pctchange']; ?></td>
 			<td><?php echo $company['volume']; ?></td>
 			<td><?php echo $company['ytdchange']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'companies', 'action' => 'view', $company['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'companies', 'action' => 'edit', $company['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'companies', 'action' => 'delete', $company['id']), array(), __('Are you sure you want to delete # %s?', $company['id'])); ?>
-			</td>
+			
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
+	<div class="">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Company'), array('controller' => 'companies', 'action' => 'add')); ?> </li>
 		</ul>
@@ -129,7 +125,7 @@
 		<th><?php echo __('Recentdate'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th class=""><?php echo __(''); ?></th>
 	</tr>
 	<?php foreach ($customer['Investment'] as $investment): ?>
 		<tr>
@@ -143,17 +139,13 @@
 			<td><?php echo $investment['recentdate']; ?></td>
 			<td><?php echo $investment['created']; ?></td>
 			<td><?php echo $investment['modified']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'investments', 'action' => 'view', $investment['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'investments', 'action' => 'edit', $investment['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'investments', 'action' => 'delete', $investment['id']), array(), __('Are you sure you want to delete # %s?', $investment['id'])); ?>
-			</td>
+			
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
+	<div class="">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Investment'), array('controller' => 'investments', 'action' => 'add')); ?> </li>
 		</ul>
@@ -174,7 +166,7 @@
 		<th><?php echo __('Datepurchased'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th class=""><?php echo __(''); ?></th>
 	</tr>
 	<?php foreach ($customer['Stock'] as $stock): ?>
 		<tr>
@@ -188,17 +180,13 @@
 			<td><?php echo $stock['datepurchased']; ?></td>
 			<td><?php echo $stock['created']; ?></td>
 			<td><?php echo $stock['modified']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'stocks', 'action' => 'view', $stock['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'stocks', 'action' => 'edit', $stock['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'stocks', 'action' => 'delete', $stock['id']), array(), __('Are you sure you want to delete # %s?', $stock['id'])); ?>
-			</td>
+			
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
+	<div class="">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Stock'), array('controller' => 'stocks', 'action' => 'add')); ?> </li>
 		</ul>

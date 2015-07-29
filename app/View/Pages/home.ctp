@@ -12,9 +12,9 @@ endif;
 
 App::uses('Debugger', 'Utility');
 ?>
-<link rel="stylesheet" href="app/webroot/css/eagle.css" type="text/css">
+<link rel="stylesheet" href="app/webroot/css/cake.generic.css" type="text/css">
 
-<h2 align="left"><?php echo '<img src="app/webroot/img/eagle pic1.jpg" alt="EFS" width="300" height="200"/>'; ?></h2>
+<h2 align="center"><?php echo '<img src="app/webroot/img/eagle pic1.jpg" alt="EFS" width="300" height="200"/>'; ?></h2>
 
 <?php
 if (Configure::read('debug') > 0):
@@ -27,17 +27,7 @@ endif;
 <h3 align='center' ><?php echo __d('intro', 'Financial Advisor Portfolio Planner'); ?></h3>
 <h3 align='left' ><?php echo __d('intro', 'Portfolio Planner Options'); ?>
 </h3>
-<div class='third' id='drop_down'>
-<select id="animal" name="animal">                      
-  <option value="0">Select an option</option>
-  <option value="1">Select a customer and review profile</option>
-  <option value="2">Update Stock Portfolio</option>
-  <br />
-  <br />
-  <br />
-  <option value="3">Update Non-Stock Investments</option>
-</select>
-</div>
+
 <!-- <p align='center'>
 <?php
 // echo __d('cake_dev', 'To change the content of this page, edit: %s.<br />
@@ -46,7 +36,25 @@ endif;
 // 	'APP/View/Pages/home.ctp', 'APP/View/Layouts/default.ctp', 'APP/webroot/css');
 ?>
 </p> -->
+<align="right">
+<form name="form1">
+<select name="menu1" id="menu1">
+<option value="">Select an option</option>
+<option value="customers">Customer<font="12"></option>
+<option value="investments">Investments</option>
+<option value="stocks">Stocks</option>
+<option value="companies">Companies</option></center>
 
+</select>
+
+<script type="text/javascript">
+ var urlmenu = document.getElementById( 'menu1' );
+ urlmenu.onchange = function() {
+      window.open(  this.options[ this.selectedIndex ].value );
+ };
+</script>
+</body>
+</html>
 <p align='center'>
 	<?php
 	echo $this->Html->link(
@@ -78,6 +86,6 @@ endif;
 	<?php
 	echo $this->Html->link(
 		__d('companies', 'Companies'),
-		'http://localhost:8080/eagle/investments',
+		'http://localhost:8080/eagle/companies',
 		array('target' => '_blank', 'escape' => false)
 	);
